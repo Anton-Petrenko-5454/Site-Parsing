@@ -44,7 +44,7 @@ all_matches = content.find_all('div', class_='match')
 
 for match in all_matches:
     if match.find_next('span', class_='not-online').string == 'матч завершен':
-        home_name = match.find_next('tr', class_='home-row').select('.team-name a')[0].select
+        home_name = match.find_next('tr', class_='home-row').select('.team-name a')[0].string
         home_score = match.find_next('tr', class_='home-row').select('.score')[0].string
 
         visit_name = match.find_next('tr', class_='visit-row').select('.team-name a')[0].string
